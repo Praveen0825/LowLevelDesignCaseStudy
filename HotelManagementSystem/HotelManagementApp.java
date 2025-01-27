@@ -16,14 +16,14 @@ public class HotelManagementApp {
         system.addCustomer(new Customer(2, "Bob", "bob@example.com"));
 
         // Booking a Room
-        system.bookRoom(1, 1, 101, LocalDate.now().plusDays(2), LocalDate.now().plusDays(5), 5000.0, PaymentMode.CREDIT_CARD);
+        system.bookRoom(1, 1, 101, LocalDate.now().plusDays(2), LocalDate.now().plusDays(5), 5000.0, PaymentMode.CASH);
 
 
         // Sending Reminders
         system.sendReminders();
 
         // Cancelling a Booking
-        system.cancelBooking(1, 5000.0, PaymentMode.CREDIT_CARD);
+        system.cancelBooking(1, 5000.0, PaymentMode.CASH);
 
     }
 }
