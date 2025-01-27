@@ -1,0 +1,61 @@
+description of the UML diagram for the Hotel Management System. The diagram would include the following components:
+
+Classes
+1. Room
+Attributes:
+roomId: int
+type: RoomType
+isAvailable: boolean
+Methods:
+Constructor Room(int roomId, RoomType type)
+
+2. Customer
+Attributes:
+customerId: int
+name: String
+email: String
+Methods:
+Constructor Customer(int customerId, String name, String email)
+
+3. Booking
+Attributes:
+bookingId: int
+customer: Customer
+room: Room
+checkInDate: LocalDate
+checkOutDate: LocalDate
+Methods:
+Constructor Booking(int bookingId, Customer customer, Room room, LocalDate checkInDate, LocalDate checkOutDate)
+
+4. NotificationService
+Methods:
+sendNotification(Customer customer, NotificationType type): void
+
+5. PaymentService
+Methods:
+processPayment(Customer customer, double amount, PaymentMode mode): void
+
+6. HotelManagementSystem
+Attributes:
+rooms: Map<Integer, Room>
+customers: Map<Integer, Customer>
+bookings: Map<Integer, Booking>
+notificationService: NotificationService
+Methods:
+addRoom(Room room): void
+addCustomer(Customer customer): void
+searchAvailableRoom(RoomType type): Room
+bookRoom(int bookingId, int customerId, int roomId, LocalDate checkInDate, LocalDate checkOutDate): void
+cancelBooking(int bookingId): void
+housekeepingLog(int roomId, String task): void
+addRoomService(int bookingId, String service): void
+sendReminders(): void
+Relationships
+HotelManagementSystem aggregates:
+Room (1..*)
+Customer (1..*)
+Booking (1..*)
+Booking associates with:
+Customer (1)
+Room (1)
+NotificationService and PaymentService are used by HotelManagementSystem

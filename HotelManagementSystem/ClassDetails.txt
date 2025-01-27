@@ -1,0 +1,11 @@
+the Hotel Management System provides the following features:
+
+Room management for different types of rooms.
+Customer management.
+Room booking with check-in and check-out dates.
+Booking cancellation with refund eligibility check.
+Notifications for check-in and check-out reminders.
+Room housekeeping logs.
+Adding room services or amenities.
+Payment processing for bookings.
+
