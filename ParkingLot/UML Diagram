@@ -1,0 +1,37 @@
++-------------------+       +-------------------+       +-------------------+
+|    Vehicle        |       |   ParkingSpot     |       |      Level        |
++-------------------+       +-------------------+       +-------------------+
+| - licensePlate    |       | - spotId: String  |       | - levelNumber: int|
+| - type: VehicleType|      | - type: VehicleType|      | - spots: List<ParkingSpot>|
++-------------------+       | - isAvailable: boolean|   | - availableSpots: Map<VehicleType, Integer>|
+                   |         | - level: int      |       +-------------------+
+                   |         +-------------------+       | + findAndOccupySpot()|
+                   |         | + occupy(): boolean|      | + releaseSpot()     |
+                   |         | + release(): boolean|     +-------------------+
+                   |         +-------------------+                |
+                   |                                              |
+                   |                                              |
++-------------------+       +-------------------+       +-------------------+
+|   ParkingLot      |       |  ParkingTicket    |       |  EntryPoint/ExitPoint|
++-------------------+       +-------------------+       +-------------------+
+| - levels: List<Level>|    | - ticketId: String|       | - parkingLot: ParkingLot|
++-------------------+       | - vehicle: Vehicle|       +-------------------+
+| + assignSpot()     |      | - spot: ParkingSpot|      | + enter()          |
+| + releaseSpot()    |      | - entryTime: long  |      | + exit()           |
+| + getAvailableSpots()|    | - exitTime: long   |      +-------------------+
++-------------------+       +-------------------+
+           |                          |
+           |                          |
+           |                          |
++-------------------+       +-------------------+
+|   FeeCalculator   |       |    Payment        |
++-------------------+       +-------------------+
+| + calculateFee()  |       | + processPayment()|
++-------------------+       +-------------------+
+                                   ^
+                                   |
+                   +---------------+-----------------+
+                   |               |                 |
+         +----------------+ +----------------+ +------------------+
+         | CashPayment    | | CreditCardPay  | | DigitalWalletPay |
+         +----------------+ +----------------+ +------------------+
