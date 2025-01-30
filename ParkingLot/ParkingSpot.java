@@ -6,10 +6,10 @@ public class ParkingSpot {
     private boolean isAvailable;
     private int level;
 
-    public ParkingSpot(String spotId, VehicleType type, boolean isAvailable, int level) {
+    public ParkingSpot(String spotId, VehicleType type, int level) {
         this.spotId = spotId;
         this.type = type;
-        this.isAvailable = isAvailable;
+        this.isAvailable = true;
         this.level = level;
     }
     public boolean occupy(){
