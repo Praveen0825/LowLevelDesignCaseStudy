@@ -25,6 +25,10 @@ public class Question {
 
     public void addAnswer(Answer answer) {
         answers.add(answer);
+        sortAnswersByVotes();
+    }
+
+    public void sortAnswersByVotes() {
         answers.sort(Comparator.comparingInt(a -> -a.votes)); // Sort answers by votes
     }
 

@@ -19,6 +19,7 @@ public class AnswerService {
             throw new RuntimeException("Invalid answer index.");
         }
         question.answers.get(answerIndex).upvote();
+        question.sortAnswersByVotes();
         System.out.println("Answer upvoted successfully.");
     }
 }
