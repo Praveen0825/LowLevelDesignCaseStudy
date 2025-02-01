@@ -1,0 +1,11 @@
+Flipkart is starting a new question answer platform for developers. In this social media platform, we will enable users to ask any tech related questions and get some awesome answers.
+
+
+Features:
+Signup for new users and create a profile having some user details like name, profession etc.
+Users should be able to login/logout. (For simplicity you can assume only one user can be logged in at a time)
+Users can subscribe/unsubscribe from topics (like ‘java’, python etc..).
+Users should be able to filter their feeds on topics.
+Users should be able to view details of a single question and their responses. Questions should have basic information such as user / topics / timestamp.
+Users can ask questions which must be attached to at least one topic. They can attach any number of topics to the questions. Users can answer questions only if they have subscribed to that topic to which the question belongs.
+Only logged in users can ask and answer questions / but any user can view questions
