@@ -1,0 +1,41 @@
+Problem Definition:
+A company FooBar has hosted an Online Auction System where any User(seller) can sell an object through an auction.
+Each auction has a lowest bid limit and the highest bid limit.
+Any registered user(buyer) can participate in an auction and bid on the product. He/She can update this bid amount or withdraw from an auction until the auction is completed. There is a meager participation cost of Rs. x for participating in an auction.
+
+
+The Seller is given 20% of the participation cost(x). Rest remains as commission for FooBar.
+
+
+When the auction closes, show the winning bid using the highest unique bid.
+For a seller, show the profit/loss. profit/loss = winning auction price + participation cost-share(no_of_bidders * 0.2 * participation cost) - an average of the lowest and highest bid limits
+If there is no winner then the profit will only be from participation cost.
+
+
+The program should take as input two or more auctions and a set of users participating in these. Multiple auctions can happen simultaneously.
+
+
+Highest Unique bid definition:
+For a set of users A, B, C, D, E, F participating in auction A1
+
+
+A bids 50,
+B bids 90,
+C bids 100,
+D bids 90,
+E bids 70,
+F bids 100
+Here 70 is the highest unique bid, therefore E is the winner. If there is no highest unique bid by the end of the auction, there is no winner for the auction.
+
+
+Bonus:
+Upgrade the buyer to a preferred buyer if he has participated in more than 2 auctions in the past. And for choosing a winner, whenever there is a tie on the highest bid, preference should be given to the preferred buyer and if it's tied between multiple preferred buyers, fallback to the next highest bid.
+The preferred buyer is across sellers on the platform.
+Functionalities expected:
+• Add Buyer(name)
+• Add Seller(name)
+• Create Auction(id, lowest bid limit, highest bid limit, partiticipation_cost, seller)
+• Create/Update Bid(buyer, auction, amount)
+• Withdraw bid(buyer, auction)
+• Close auction and return winning bid
+• Get profit/loss(seller, auction)
