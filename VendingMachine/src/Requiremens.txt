@@ -1,0 +1,13 @@
+* Requirements:
+ * 1. Insert Coins: Users should be able to insert coins.
+ * 2. Select Item: Users should select an item from the vending machine.
+ * 3. Dispense Item: The machine should dispense the selected item if the balance is sufficient.
+ * 4. Maintain Inventory: The vending machine should keep track of available items.
+ * 5. State Management: The machine should transition between different states (Idle, Has Money, Dispensing).
+ * 6. Handle Insufficient Funds: If the inserted money is not enough, the machine should throw an exception.
+ * 7. Exception Handling: The system should handle invalid operations like selecting an item before inserting money.
+ * 8. Factory Pattern: To create different types of items dynamically.
+ * 9. Accepting Cash & Wallet Payment: Users should be able to pay via cash or wallet.
+ * 10. Select Slot, Price, Pay: Users should select a slot, check the price, and make a payment.
+ * 11. Vend the Product / Cancel Transaction: Users can either get the product or cancel the transaction.
+ * 12. Admin Loading: Admin should be able to load products into the vending machine once a day.
