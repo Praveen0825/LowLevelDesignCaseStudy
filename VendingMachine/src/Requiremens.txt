@@ -11,3 +11,4 @@
  * 10. Select Slot, Price, Pay: Users should select a slot, check the price, and make a payment.
  * 11. Vend the Product / Cancel Transaction: Users can either get the product or cancel the transaction.
  * 12. Admin Loading: Admin should be able to load products into the vending machine once a day.
+ * 13. Decrease Item Count: After dispensing an item, its count should be decreased from the vending machine.
